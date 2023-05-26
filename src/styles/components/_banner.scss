@@ -1,0 +1,15 @@
+.banner {
+  background: url("../../assets/img/imgBanner.png") center/cover;
+  height: 225px;
+  //max-width: 1240px;
+  margin: 40px 0;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    color: white;
+    font-size: 48px;
+    font-weight: 500;
+  }
+}
