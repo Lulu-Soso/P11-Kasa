@@ -9,17 +9,17 @@
       text-decoration: none;
       margin-left: 60px;
       //padding: 10px;
+      color: $color-red-light;
+      font-size: 24px;
+      font-weight: 500;
 
       li {
-        color: $color-red;
         transition: 0.2s;
         cursor: pointer;
-        font-size: 24px;
-        font-weight: 500;
 
 
         &:hover {
-          color: $color-red;
+          color: $color-red-light;
         }
       }
     }
@@ -31,7 +31,7 @@
         content: "";
         height: 2px;
         width: 0;
-        background: $color-red;
+        background: $color-red-light;
         position: absolute;
         border-radius: 10px;
         bottom: 0;
