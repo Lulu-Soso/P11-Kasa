@@ -6,6 +6,7 @@
 $font-1: "font-1", sans-serif;
 
 $white: white;
+$black: #000000;
 $color-red-light: #FF6060;
 $color-grey: #F6F6F6;
 
@@ -18,8 +19,8 @@ $color-grey: #F6F6F6;
 body {
   background: $white;
   font-family: $font-1;
-  max-width: 1240px;
-  margin: auto;
+  //max-width: 1240px;
+  //margin: auto;
 }
 
 li {

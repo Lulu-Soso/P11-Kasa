@@ -1,0 +1,25 @@
+.footer {
+  background-color: $black;
+  height: 210px;
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  //align-items: center;
+
+  .footer-items {
+    display: flex;
+    flex-direction: column;
+    //justify-content: center;
+
+    img {
+      width: 122px;
+      margin: 55px auto;
+    }
+
+    p {
+      font-size: 24px;
+      font-weight: 500;
+    }
+  }
+}

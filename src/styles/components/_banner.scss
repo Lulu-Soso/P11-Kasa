@@ -19,7 +19,8 @@
   position: relative;
   border-radius: 15px;
   height: 225px;
-  margin: 40px 0;
+  max-width: 1240px;
+  margin: auto;
   .banner-cover {
     background: url("../../assets/img/imgBanner.png") center/cover;
     height: 225px;
