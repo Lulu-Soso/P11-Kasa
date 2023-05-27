@@ -1,15 +1,47 @@
+@mixin assombrir($white) {
+  filter: brightness(0.7) saturate(1);
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    opacity: 0.5;
+    z-index: -1;
+    border-radius: 15px;
+  }
+}
+
 .banner {
-  background: url("../../assets/img/imgBanner.png") center/cover;
-  height: 225px;
-  //max-width: 1240px;
-  margin: 40px 0;
+  position: relative;
   border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 225px;
+  margin: 40px 0;
+  .banner-cover {
+    background: url("../../assets/img/imgBanner.png") center/cover;
+    height: 225px;
+    //max-width: 1240px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    @include assombrir(rgba(0, 0, 0, 0.2));
+    z-index: -1;
+  }
+
   h1 {
     color: white;
     font-size: 48px;
     font-weight: 500;
+    bottom: 145px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
   }
 }
+
