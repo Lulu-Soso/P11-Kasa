@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {useEffect, useState} from 'react';
 import AccommodationData from '../utils/datas/accommodationsData.json';
 import Card from "./Card";
 
@@ -12,9 +12,11 @@ const Accommodations = () => {
   return (
       <div>
         <ul className="grid-card">
-        {data.map((accommodation) => (
-            <Card accommodation={accommodation} key={accommodation.id} />
-        ))}
+          {data.map((accommodation) => (
+              <li>
+                <Card accommodation={accommodation} key={accommodation.id}/>
+              </li>
+          ))}
         </ul>
         {/*{data.map((accommodation) => (*/}
         {/*    <div key={accommodation.id}>*/}
