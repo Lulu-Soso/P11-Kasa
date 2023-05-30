@@ -3,12 +3,9 @@ import Header from "../components/Header";
 import AccommodationsData from '../utils/datas/accommodationsData.json'
 import {useParams} from "react-router-dom";
 import Slideshow from "../components/Slideshow";
-import accommodations from "../components/Accommodations";
 import Footer from "../components/Footer";
-import TitleAccommodation from "../components/TitleAccommodation";
-import LocationAccommodation from "../components/LocationAccommodation";
-import TagAccommodation from "../components/TagAccommodation";
-import Rating from "../components/rating";
+import Infos from "../components/Infos";
+import Collapse from "../components/Collapse";
 
 console.log(AccommodationsData)
 const Accommodation = () => {
@@ -23,7 +20,7 @@ const Accommodation = () => {
     // Gérer le cas où le logement n'est pas trouvé
     return (
         <div>
-          <Header />
+          <Header/>
           <h1>Logement introuvable</h1>
         </div>
     );
@@ -31,27 +28,19 @@ const Accommodation = () => {
 
   return (
       <div>
-      <div className="container">
-        <Header />
-        <Slideshow slides={selectedAccommodation.pictures}  />
-        <div className="infos">
-          <div className="infos-left">
-            <TitleAccommodation title={selectedAccommodation.title} />
-            <LocationAccommodation location={selectedAccommodation.location} />
-            <TagAccommodation tag={selectedAccommodation.tags.map((tag) => (
-                <li key={tag}>{tag}</li>
-            ))} />
-
-
-          </div>
-          <div className="infos-right">
-            <p>Alexandre Dumas</p>
-            <Rating />
-          </div>
-
+        <div className="container">
+          <Header/>
+          <Slideshow slides={selectedAccommodation.pictures}/>
+          <Infos
+              title={selectedAccommodation.title}
+              location={selectedAccommodation.location}
+              tags={selectedAccommodation.tags}
+              host={selectedAccommodation.host}
+              rating={selectedAccommodation.rating}
+          />
+          <Collapse />
         </div>
-      </div>
-        <Footer />
+        <Footer/>
 
       </div>
   );
