@@ -5,7 +5,7 @@ import {useParams} from "react-router-dom";
 import Slideshow from "../components/Slideshow";
 import Footer from "../components/Footer";
 import Infos from "../components/Infos";
-import Collapse from "../components/Collapse";
+import Dropdown from "../components/Dropdown";
 
 console.log(AccommodationsData)
 const Accommodation = () => {
@@ -30,7 +30,9 @@ const Accommodation = () => {
       <div>
         <div className="container">
           <Header/>
+
           <Slideshow slides={selectedAccommodation.pictures}/>
+
           <Infos
               title={selectedAccommodation.title}
               location={selectedAccommodation.location}
@@ -38,7 +40,14 @@ const Accommodation = () => {
               host={selectedAccommodation.host}
               rating={selectedAccommodation.rating}
           />
-          <Collapse />
+
+          <Dropdown
+              contentDescription={selectedAccommodation.description}
+              contentEquipments={(selectedAccommodation.equipments).map((equipment, index) => (
+                  <li key={index}>{equipment}</li>
+              ))}
+              currentPage="accommodation"
+          />
         </div>
         <Footer/>
 
