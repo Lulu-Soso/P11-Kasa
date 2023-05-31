@@ -50,6 +50,11 @@
         font-weight: 500;
         margin-right: 10px;
 
+        p {
+          text-align: right;
+          flex-flow: column-reverse;
+        }
+
       }
 
       img {

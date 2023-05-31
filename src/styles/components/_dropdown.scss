@@ -11,11 +11,13 @@
     align-items: center;
     justify-content: space-between;
     padding: 20px;
+    margin-bottom: 30px;
     //width: 580px;
 
     h3 {
       font-size: 18px;
       font-weight: 500;
+      //color: $white;
     }
 
     button {
@@ -28,7 +30,7 @@
     background-color: $color-grey;
     color: $color-red-light;
     position: relative;
-    top: -10px;
+    top: -40px;
     z-index: -1;
     border-radius: 10px;
     margin-bottom: 15px;

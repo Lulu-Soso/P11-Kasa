@@ -33,6 +33,7 @@ const Slideshow = ({slides}) => {
               <button className="leftArrow" onClick={goToPreviousSlide}>
                 <img src={arrowLeft} alt="flèche de navigation à gauche"/>
               </button>
+
               <button className="rightArrow" onClick={goToNextSlide}>
                 <img src={arrowRight} alt="flèche de navigation à droite"/>
               </button>
@@ -41,14 +42,14 @@ const Slideshow = ({slides}) => {
 
         {showControlsAndIndicators && (
             <span className="indicators">
-          {slides.map((slide, index) => (
-              <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={currentSlide === index ? 'indicator' : 'indicator-inactive'}
-              ></button>
-          ))}
-        </span>
+              {slides.map((slide, index) => (
+                  <button
+                      key={index}
+                      onClick={() => setCurrentSlide(index)}
+                      className={currentSlide === index ? 'indicator' : 'indicator-inactive'}
+                  ></button>
+              ))}
+            </span>
         )}
       </div>
   );

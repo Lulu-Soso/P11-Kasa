@@ -16,11 +16,10 @@
       li {
         transition: 0.2s;
         cursor: pointer;
-
-
-        &:hover {
-          color: $color-red-light;
-        }
+        //
+        //&:hover {
+        //  color: $color-red-light;
+        //}
       }
     }
 

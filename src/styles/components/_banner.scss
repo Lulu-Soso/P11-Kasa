@@ -21,28 +21,27 @@
   height: 225px;
   max-width: 1240px;
   margin: auto;
-  .banner-cover {
-    background: url("../../assets/img/imgBanner.png") center/cover;
-    height: 225px;
-    //max-width: 1240px;
-    border-radius: 15px;
+  overflow: hidden;
+
+  .banner-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    @include assombrir(rgba(0, 0, 0, 0.2));
-    z-index: -1;
-  }
+    height: 225px;
 
-  h1 {
-    color: white;
-    font-size: 48px;
-    font-weight: 500;
-    bottom: 145px;
-    position: relative;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
+    .banner-cover {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include assombrir(rgba(0, 0, 0, 0.2));
+    }
+
+    h1 {
+      color: white;
+      font-size: 48px;
+      font-weight: 500;
+      position: absolute;
+    }
   }
 }
 
