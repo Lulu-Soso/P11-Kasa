@@ -4,17 +4,17 @@ import Banner from "../components/Banner";
 import Gallery from "../components/Gallery";
 import Footer from "../components/Footer";
 
-const Home = () => {
+const HomePage = () => {
   return (
       <div>
         <div className="container">
           <Header/>
           <Banner currentPage="/"/>
-          <Gallery/>
+          <Gallery />
         </div>
         <Footer/>
       </div>
   );
 };
 
-export default Home;
+export default HomePage;

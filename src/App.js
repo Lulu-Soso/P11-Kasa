@@ -1,19 +1,34 @@
-import React from 'react';
-import {BrowserRouter, Routes, Route} from "react-router-dom";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import AccommodationPage from "./pages/Accommodation";
-import NotFound from "./pages/NotFound";
-
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import HomePage from './pages/Home-Page';
+import AboutPage from './pages/About-Page';
+import AccommodationPage from './pages/Accommodation-Page';
+import NotFoundPage from './pages/NotFound-Page';
+import PreLoader from './components/PreLoader';
 const App = () => {
+  const [contentLoaded, setContentLoaded] = useState(false);
+
+  useEffect(() => {
+
+    const loadingTimeout = setTimeout(() => {
+      // Après le chargement, marquez le contenu comme chargé
+      setContentLoaded(true);
+    }, 1000);
+
+    return () => {
+      clearTimeout(loadingTimeout);
+    };
+  }, []);
+
   return (
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/accommodation/:id" element={<AccommodationPage />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        {!contentLoaded && <PreLoader />}
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/accommodation/:id" element={<AccommodationPage />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
       </BrowserRouter>
   );
 };

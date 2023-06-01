@@ -6,9 +6,10 @@ import Slideshow from "../components/Slideshow";
 import Footer from "../components/Footer";
 import Infos from "../components/Infos";
 import Dropdown from "../components/Dropdown";
+import NotFoundPage from "./NotFound-Page";
 
 console.log(AccommodationsData)
-const Accommodation = () => {
+const AccommodationPage = () => {
   const {id} = useParams()
 
   // Trouver le logement correspondant à l'Id dans les données'
@@ -20,8 +21,7 @@ const Accommodation = () => {
     // Gérer le cas où le logement n'est pas trouvé
     return (
         <div>
-          <Header/>
-          <h1>Logement introuvable</h1>
+          <NotFoundPage />
         </div>
     );
   }
@@ -55,5 +55,5 @@ const Accommodation = () => {
   );
 };
 
-export default Accommodation;
+export default AccommodationPage;
 

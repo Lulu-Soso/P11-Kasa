@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-const NotFound = () => {
+const NotFoundPage = () => {
   return (
       <div>
         <Header/>
@@ -17,4 +17,4 @@ const NotFound = () => {
   );
 };
 
-export default NotFound;
+export default NotFoundPage;

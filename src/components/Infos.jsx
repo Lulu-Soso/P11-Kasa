@@ -1,5 +1,5 @@
 import React from 'react';
-import Rating from "./rating";
+import Rating from "./Rating";
 
 const Infos = ({ title, location, tags, host, rating}) => {
   const { name, picture } = host;
