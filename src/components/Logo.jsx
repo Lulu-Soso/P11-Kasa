@@ -1,11 +1,13 @@
 import React from 'react';
 import logoKasa from '../assets/img/LOGO.png'
+import {Link} from "react-router-dom";
 
 const Logo = () => {
   return (
       <div className="logo">
-        {/*Les images importées depuis la balise img sont accessibles dans "public"*/}
-        <img src={logoKasa} alt="logo Kasa"/>
+        <Link to="/">
+          <img src={logoKasa} alt="logo Kasa"/>
+        </Link>
       </div>
   );
 };

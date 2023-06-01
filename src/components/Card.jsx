@@ -6,7 +6,7 @@ const Card = ({accommodation}) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    console.log(`Navigating to accommodation with ID: ${accommodation.id}`);
+    // console.log(`Navigating to accommodation with ID: ${accommodation.id}`);
     navigate(`/accommodation/${accommodation.id}`);
   };
 

@@ -6,6 +6,7 @@ const Footer = () => {
       <div>
         <ItemsFooter />
       </div>
+
   );
 };
 

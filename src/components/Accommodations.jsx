@@ -11,13 +11,13 @@ const Accommodations = () => {
 
   return (
       <div>
-        <ul className="grid-card">
+        <div className="grid-card">
           {data.map((accommodation) => (
               <li>
                 <Card accommodation={accommodation} key={accommodation.id}/>
               </li>
           ))}
-        </ul>
+        </div>
       </div>
   );
 };
