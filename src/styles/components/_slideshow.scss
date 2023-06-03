@@ -1,6 +1,5 @@
 .slideshow-container {
   height: 415px;
-  background: #FF6060;
   border-radius: 25px;
   position: relative;
   display: flex;
@@ -15,6 +14,10 @@
 
     .slide-hidden {
       display: none;
+    }
+
+    img {
+      animation: apparition-slides 1.5s;
     }
   }
 }
@@ -70,5 +73,14 @@
     box-shadow: 0 0 5px #555;
     margin: 0 0.2rem;
     cursor: pointer;
+  }
+}
+
+@keyframes apparition-slides {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
   }
 }

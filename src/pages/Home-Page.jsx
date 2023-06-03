@@ -9,8 +9,8 @@ const HomePage = () => {
       <div>
         <div className="container">
           <Header/>
-          <Banner currentPage="/"/>
-          <Gallery />
+            <Banner currentPage="/"/>
+          <Gallery/>
         </div>
         <Footer/>
       </div>

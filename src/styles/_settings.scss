@@ -30,6 +30,13 @@ li {
 .container {
   max-width: 1240px;
   margin: auto;
+
+  @media screen and (max-width: 1023px) {
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 20px;
+  }
 }
 
 

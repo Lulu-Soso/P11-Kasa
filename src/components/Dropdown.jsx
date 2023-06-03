@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import iconOpen from '../assets/img/icon-open.png';
 import iconClose from '../assets/img/icon-close.png';
 
-const Dropdown = ({title, contentDescription, contentEquipments, contentReliability, currentPage}) => {
+const Dropdown = ({description, equipments, currentPage}) => {
   const [isOpenDescription, setIsOpenDescription] = useState(false);
   const [isOpenEquipments, setIsOpenEquipments] = useState(false);
   const [isOpenReliability, setIsOpenReliability] = useState(false);
@@ -57,7 +57,7 @@ const Dropdown = ({title, contentDescription, contentEquipments, contentReliabil
                   </button>
                 </div>
                 {isOpenDescription && shouldShowDescription &&
-                    <div className="dropdown-content">{contentDescription}</div>}
+                    <div className="dropdown-content"><p>{description}</p></div>}
               </div>
           )}
 
@@ -74,7 +74,7 @@ const Dropdown = ({title, contentDescription, contentEquipments, contentReliabil
                   </button>
                 </div>
                 {isOpenEquipments && shouldShowEquipments &&
-                    <div className="dropdown-content">{contentEquipments}</div>}
+                    <div className="dropdown-content"><p>{equipments}</p></div>}
               </div>
           )}
         </div>

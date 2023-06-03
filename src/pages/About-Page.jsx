@@ -7,12 +7,14 @@ import Banner from "../components/Banner";
 const AboutPage = () => {
   return (
       <div>
-        <Header />
-        <Banner currentPage="about"/>
-          <Dropdown
-              currentPage="about"
-          />
-        <Footer />
+        <div className="container">
+          <Header/>
+          {/*<div className="banner-about">*/}
+          <Banner currentPage="about"/>
+          {/*</div>*/}
+          <Dropdown currentPage="about"/>
+        </div>
+        <Footer/>
       </div>
   );
 };

@@ -1,7 +1,31 @@
 .gallery {
-  background-color: $color-grey;
   min-height: 200px;
-  border-radius: 15px;
   margin: 40px auto;
   max-width: 1240px;
+
+  .grid-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    padding: 50px;
+    background-color: $color-grey;
+    border-radius: 15px;
+
+    @media screen and (max-width: 1023px) {
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      padding: 30px;
+    }
+
+    @media screen and (max-width: 767px) {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 0;
+      background-color: $white;
+    }
+
+    ul {
+      display: contents;
+    }
+  }
 }

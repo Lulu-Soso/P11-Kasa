@@ -2,26 +2,26 @@ import React, {useState} from 'react';
 import arrowLeft from '../assets/img/arrowLeft.png';
 import arrowRight from '../assets/img/arrowRight.png';
 
-const Slideshow = ({slides}) => {
+const Slideshow = ({pictures}) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const goToPreviousSlide = () => {
-    setCurrentSlide((prevIndex) => (prevIndex === 0 ? slides.length - 1 : prevIndex - 1));
+    setCurrentSlide((prevIndex) => (prevIndex === 0 ? pictures.length - 1 : prevIndex - 1));
   };
 
   const goToNextSlide = () => {
-    setCurrentSlide((prevIndex) => (prevIndex === slides.length - 1 ? 0 : prevIndex + 1));
+    setCurrentSlide((prevIndex) => (prevIndex === pictures.length - 1 ? 0 : prevIndex + 1));
   };
 
-  const showControlsAndIndicators = slides.length > 1;
+  const showControlsAndIndicators = pictures.length > 1;
 
   return (
       <div className="slideshow-container">
         <div className="slides">
-          {slides.map((slide, index) => (
+          {pictures.map((picture, index) => (
               <img
                   key={index}
-                  src={slide}
+                  src={picture}
                   alt={`Image ${index}`}
                   className={currentSlide === index ? 'slides' : 'slides slide-hidden'}
               />
@@ -42,7 +42,7 @@ const Slideshow = ({slides}) => {
 
         {showControlsAndIndicators && (
             <span className="indicators">
-              {slides.map((slide, index) => (
+              {pictures.map((picture, index) => (
                   <button
                       key={index}
                       onClick={() => setCurrentSlide(index)}

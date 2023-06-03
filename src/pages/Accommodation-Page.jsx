@@ -31,7 +31,7 @@ const AccommodationPage = () => {
         <div className="container">
           <Header/>
 
-          <Slideshow slides={selectedAccommodation.pictures}/>
+          <Slideshow pictures={selectedAccommodation.pictures}/>
 
           <Infos
               title={selectedAccommodation.title}
@@ -42,8 +42,8 @@ const AccommodationPage = () => {
           />
 
           <Dropdown
-              contentDescription={selectedAccommodation.description}
-              contentEquipments={(selectedAccommodation.equipments).map((equipment, index) => (
+              description={selectedAccommodation.description}
+              equipments={(selectedAccommodation.equipments).map((equipment, index) => (
                   <li key={index}>{equipment}</li>
               ))}
               currentPage="accommodation"
