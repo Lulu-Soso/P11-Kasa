@@ -2,8 +2,10 @@
   border-radius: 10px;
   height: 340px;
   cursor: pointer;
+  position: relative;
 
   @media screen and (max-width: 1023px) {
+    height: 297px;
   }
 
   @media screen and (max-width: 767px) {
@@ -38,16 +40,18 @@
     }
   }
 
-  h2 {
-    position: relative;
-    bottom: 80px;
-    color: white;
-    font-size: 18px;
-    font-weight: 500;
-    max-width: 90%;
-    padding: 20px;
-  }
+  .card-title-container {
+    position: absolute;
+    bottom: 10px;
+    padding: 0 10px;
 
+    h2 {
+      color: white;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+  }
 
 }
 

@@ -4,20 +4,37 @@
   flex-direction: column;
   align-items: center;
   margin: 80px auto;
-  max-width: 1240px;
-  //background-color: green;
   color: $color-red-light;
 
   h1 {
     font-size: 288px;
     font-weight: 700;
     line-height: 410px;
+
+    @media screen and (max-width: 1023px) {
+      font-size: 192px;
+      line-height: 1.5;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 96px;
+      line-height: 1.5;
+    }
   }
 
   p {
     font-size: 36px;
     font-weight: 500;
-    //margin: 30px;
+    text-align: center;
+
+    @media screen and (max-width: 1023px) {
+      font-size: 26px;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 18px;
+      width: 80%;
+    }
   }
 
   a {
@@ -26,5 +43,15 @@
     text-decoration: underline;
     color: $color-red-light;
     margin-top: 180px;
+
+    @media screen and (max-width: 1023px) {
+      font-size: 16px;
+      margin-top: 160px;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 14px;
+      margin-top: 135px;
+    }
   }
 }

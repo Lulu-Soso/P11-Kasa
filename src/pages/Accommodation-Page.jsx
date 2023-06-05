@@ -8,7 +8,6 @@ import Infos from "../components/Infos";
 import Dropdown from "../components/Dropdown";
 import NotFoundPage from "./NotFound-Page";
 
-console.log(AccommodationsData)
 const AccommodationPage = () => {
   const {id} = useParams()
 
@@ -20,9 +19,7 @@ const AccommodationPage = () => {
   if (!selectedAccommodation) {
     // Gérer le cas où le logement n'est pas trouvé
     return (
-        <div>
-          <NotFoundPage />
-        </div>
+        <NotFoundPage/>
     );
   }
 

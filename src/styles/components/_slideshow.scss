@@ -5,12 +5,28 @@
   display: flex;
   overflow: hidden;
 
+  @media screen and (max-width: 1023px) {
+    height: 335px;
+  }
+
+  @media screen and (max-width: 767px) {
+    height: 255px;
+  }
+
   .slides {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 415px;
     width: 100%;
+
+    @media screen and (max-width: 1023px) {
+      min-height: 335px;
+    }
+
+    @media screen and (max-width: 767px) {
+      min-height: 255px;
+    }
 
     .slide-hidden {
       display: none;
@@ -32,11 +48,35 @@
   padding: 25px;
   filter: drop-shadow(0 0 5px #555);
 
+  @media screen and (max-width: 1023px) {
+    height: 335px;
+  }
+
+  @media screen and (max-width: 767px) {
+    height: 255px;
+    font-size: 12px;
+    padding: 0;
+  }
+
   .leftArrow,
   .rightArrow {
     background: transparent;
-    font-size: 40px;
+    //font-size: 40px;
+    width: 46px;
     border: none;
+
+    img {
+
+      @media screen and (max-width: 1023px) {
+        width: 29px;
+      }
+
+      @media screen and (max-width: 767px) {
+        width: 12px;
+      }
+
+    }
+
 
     &:hover {
       cursor: pointer;

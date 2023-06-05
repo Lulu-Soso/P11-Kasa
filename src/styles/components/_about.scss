@@ -1,8 +1,14 @@
 .about-container {
-  max-width: 1025px;
+  //max-width: 1025px;
+  width: 85%;
   margin: 50px auto;
+
+  @media screen and (max-width: 1023px) {
+    margin: 35px auto;
+  }
 
   @media screen and (max-width: 767px) {
     margin: 20px auto;
+    width: 100%;
   }
 }

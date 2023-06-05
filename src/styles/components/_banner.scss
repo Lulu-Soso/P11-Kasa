@@ -23,6 +23,10 @@
   margin: auto;
   overflow: hidden;
 
+  @media screen and (max-width: 1023px) {
+    height: 170px;
+  }
+
   @media screen and (max-width: 767px) {
     height: 111px;
   }
@@ -33,6 +37,10 @@
   justify-content: center;
   align-items: center;
   height: 225px;
+
+  @media screen and (max-width: 1023px) {
+    height: 170px;
+  }
 
   @media screen and (max-width: 767px) {
     display: flex;
@@ -47,11 +55,11 @@
     position: absolute;
 
     @media screen and (max-width: 1023px) {
+      font-size: 36px;
     }
 
     @media screen and (max-width: 767px) {
       font-size: 24px;
-      font-weight: 500;
       width: 220px;
       margin-left: 15px;
     }

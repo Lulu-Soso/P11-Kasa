@@ -6,8 +6,11 @@
   margin: 40px auto;
   max-width: 1240px;
 
+  @media screen and (max-width: 1023px) {
+    margin: 28px auto;
+  }
+
   @media screen and (max-width: 767px) {
     margin: 15px auto;
-
   }
 }

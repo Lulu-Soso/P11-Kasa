@@ -3,23 +3,62 @@
   justify-content: space-between;
   color: $color-red-light;
 
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
+
   .infos-left {
     margin: 30px 0;
+
+    @media screen and (max-width: 1023px) {
+      margin: 22px 0;
+    }
+
+    @media screen and (max-width: 767px) {
+      margin: 15px 0 0;
+    }
 
     h1 {
       font-size: 36px;
       font-weight: 500;
+
+      @media screen and (max-width: 1023px) {
+        font-size: 27px;
+      }
+
+      @media screen and (max-width: 767px) {
+        font-size: 18px;
+      }
     }
 
     .location {
       font-size: 18px;
       font-weight: 500;
       margin-top: 10px;
+
+      @media screen and (max-width: 1023px) {
+        font-size: 16px;
+        margin-top: 8px;
+      }
+
+      @media screen and (max-width: 767px) {
+        font-size: 14px;
+        margin-top: 5px;
+      }
     }
 
     .tags {
       display: flex;
+      flex-wrap: wrap;
       margin-top: 30px;
+
+      @media screen and (max-width: 1023px) {
+        margin-top: 25px;
+      }
+
+      @media screen and (max-width: 767px) {
+        margin-top: 20px;
+      }
 
       .tag {
         font-size: 14px;
@@ -29,6 +68,20 @@
         margin-right: 10px;
         padding: 10px 40px;
         border-radius: 15px;
+
+        @media screen and (max-width: 1023px) {
+          font-size: 12px;
+          margin-bottom: 15px;
+          border-radius: 10px;
+          padding: 5px 35px;
+        }
+
+        @media screen and (max-width: 767px) {
+          font-size: 10px;
+          margin-bottom: 10px;
+          border-radius: 5px;
+          padding: 5px 25px;
+        }
       }
     }
   }
@@ -38,6 +91,19 @@
     flex-direction: column;
     justify-content: space-between;
     margin: 30px 0;
+    width: 235px;
+
+    @media screen and (max-width: 1023px) {
+      width: 170px;
+    }
+
+    @media screen and (max-width: 767px) {
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0;
+      width: 100%;
+    }
 
     .host {
       display: flex;
@@ -50,6 +116,14 @@
         font-weight: 500;
         margin-right: 10px;
 
+        @media screen and (max-width: 1023px) {
+          font-size: 16px;
+        }
+
+        @media screen and (max-width: 767px) {
+          font-size: 12px;
+        }
+
         p {
           text-align: right;
           flex-flow: column-reverse;
@@ -61,6 +135,16 @@
         width: 65px;
         height: 65px;
         border-radius: 50%;
+
+        @media screen and (max-width: 1023px) {
+          width: 50px;
+          height: 50px;
+        }
+
+        @media screen and (max-width: 767px) {
+          width: 32px;
+          height: 32px;
+        }
       }
     }
 

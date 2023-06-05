@@ -2,9 +2,26 @@
   display: flex;
   justify-content: space-between;
 
+  @media screen and (max-width: 1023px) {
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
+
   .dropdown {
-    width: 580px;
+    //width: 580px;
+    width: 47%;
     position: relative;
+
+    @media screen and (max-width: 1023px) {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
   }
 }
 
@@ -19,6 +36,12 @@
   padding: 20px;
   margin-bottom: 30px;
 
+  @media screen and (max-width: 1023px) {
+    margin-bottom: 25px;
+    height: 40px;
+    border-radius: 10px;
+  }
+
   @media screen and (max-width: 767px) {
     margin-bottom: 20px;
     height: 30px;
@@ -28,6 +51,10 @@
   h3 {
     font-size: 18px;
     font-weight: 500;
+
+    @media screen and (max-width: 1023px) {
+      font-size: 16px;
+    }
 
     @media screen and (max-width: 767px) {
       font-size: 13px;
@@ -40,6 +67,11 @@
     cursor: pointer;
 
     img {
+
+      @media screen and (max-width: 1023px) {
+        width: 18px;
+      }
+
       @media screen and (max-width: 767px) {
         width: 16px;
       }
@@ -60,12 +92,21 @@
   font-weight: 400;
   line-height: 25px;
 
+  @media screen and (max-width: 1023px) {
+    margin-bottom: -20px;
+  }
+
   @media screen and (max-width: 767px) {
     margin-bottom: -20px;
   }
 
   p {
     animation: apparition-content 1s;
+
+    @media screen and (max-width: 1023px) {
+      font-size: 16px;
+      line-height: 20px;
+    }
 
     @media screen and (max-width: 767px) {
       font-size: 12px;

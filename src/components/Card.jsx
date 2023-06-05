@@ -15,7 +15,9 @@ const Card = ({accommodation}) => {
         <div className="card-overlay">
           <img src={accommodation.cover} alt="image bannière"/>
         </div>
-        <h2 className="card-title">{accommodation.title}</h2>
+        <div className="card-title-container">
+        <h2>{accommodation.title}</h2>
+        </div>
       </div>
   );
 };

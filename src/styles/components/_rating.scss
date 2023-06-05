@@ -1,4 +1,15 @@
 .star-red,
 .star-grey {
   margin-left: 15px;
+  width: 24px;
+
+  @media screen and (max-width: 1023px) {
+    width: 18px;
+    margin-left: 10px;
+  }
+
+  @media screen and (max-width: 767px) {
+    width: 13px;
+    margin-left: 6px;
+  }
 }
