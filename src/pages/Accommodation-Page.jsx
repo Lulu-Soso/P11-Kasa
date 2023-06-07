@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from "../components/Header";
 import AccommodationsData from '../utils/datas/accommodationsData.json'
-import {useParams} from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Slideshow from "../components/Slideshow";
 import Footer from "../components/Footer";
 import Infos from "../components/Infos";
